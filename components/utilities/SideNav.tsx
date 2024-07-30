@@ -16,16 +16,20 @@ export const SideNav = () => {
   return (
     <aside className="w-full h-[100vh] bg-surface-container-low dark:bg-surface-container-low-dark py-[30px] space-y-[32px] shadow-xl">
       <div className="flex flex-col gap-[16px] px-[16px]">
-        <Image
+        {/* <Image
           src={mode === "light" ? "/sourcify.svg" : "/sourcify-dark.svg"}
           alt="logo"
           preview={false}
           width={117}
-        />
+        /> */}
+        <p className="font-semibold">DoraHack - DAO</p>
       </div>
       <div className="">
         <div className="p-[16px] flex gap-[28px] items-center">
-          <Avatar src="/user.png" size={52} />
+          <Avatar
+            src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1.jpg"
+            size={52}
+          ></Avatar>
           <Badge
             count={5}
             className="text-sm cursor-pointer"
@@ -39,7 +43,7 @@ export const SideNav = () => {
         </p>
         <Divider className="border-[1.5px] mb-0" />
       </div>
-      <div className="px-[16px] max-h-[400px] md:max-h-[45vh] xl:max-h-[58vh] overflow-y-auto">
+      <div className="px-[16px] max-h-[400px] md:max-h-[45vh] xl:min-h-[62vh] overflow-y-auto">
         <nav className="space-y-[4px]">
           {routes.map((route, index) => {
             const active = route.path === pathname

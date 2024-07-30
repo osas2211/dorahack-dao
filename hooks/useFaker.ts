@@ -1,40 +1,35 @@
-import { RequestDisplayI } from "@/interface/requests"
+import { ProposalI } from "@/interface/proposals"
 import { faker } from "@faker-js/faker"
 import { useState } from "react"
 
-const requestsTitles = [
-  "R · #21 Request for 50 Air Conditioners",
-  "R · #20 Request for materials in medlab laboratory",
-  "R · #20 Request for 20 copies of Introduction to Fluid Mechanics by Rajput",
+const proposalsTitles = [
+  "R · #21 proposal for 50 Air Conditioners",
+  "R · #20 proposal for materials in medlab laboratory",
+  "R · #20 proposal for 20 copies of Introduction to Fluid Mechanics by Rajput",
 ]
 
-function createRequestData(): RequestDisplayI {
+function createProposalData(): ProposalI {
   return {
     id: faker.string.uuid(),
     picture: faker.image.avatar(),
     date_submitted: faker.date.anytime().toISOString(),
     email: faker.internet.email(),
     name: faker.person.fullName(),
-    title: faker.helpers.arrayElement(requestsTitles),
+    title: faker.helpers.arrayElement(proposalsTitles),
     status: faker.helpers.arrayElement(["pending", "completed", "rejected"]),
     priority: faker.helpers.arrayElement(["urgent", "low", "high", "medium"]),
-    due_date: faker.date.anytime().toISOString(),
-    department: faker.helpers.arrayElement([
-      "Engineering",
-      "Med Lab",
-      "Accounting",
-      "Law",
-    ]),
+    end_date: faker.date.anytime().toISOString(),
+    theme: faker.helpers.arrayElement(["Engineering", "Tech", "Web3", "Ai"]),
   }
 }
 
-export const useGenerateRequestData = () => {
-  // const [requests, setRequets] = useState<RequestDisplayI[]>([])
-  const requests: RequestDisplayI[] = []
+export const useGenerateProposalData = () => {
+  // const [proposals, setRequets] = useState<ProposalI[]>([])
+  const proposals: ProposalI[] = []
   for (let count = 0; count <= 20; count++) {
-    // setRequets((prev) => [...prev, createRequestData()])
-    requests.push(createRequestData())
+    // setRequets((prev) => [...prev, createproposalData()])
+    proposals.push(createProposalData())
   }
 
-  return { requests }
+  return { proposals }
 }

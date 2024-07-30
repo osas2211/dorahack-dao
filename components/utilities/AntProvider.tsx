@@ -13,9 +13,9 @@ export const AntProvider = ({
   const { mode } = useThemeMode()
   const colors = {
     light: {
-      primaryColor: "#3A5A40",
+      primaryColor: "#10451D",
       surfaceColor: "#FBFBFB",
-      controlOutlineColor: "#3A5A40",
+      controlOutlineColor: "#10451D",
       borderColor: "#A6AEB2",
     },
     dark: {

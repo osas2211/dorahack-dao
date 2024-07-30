@@ -16,12 +16,12 @@ const config: Config = {
       },
       colors: {
         // LIGHT MODE COLORS
-        primary: "#072630",
-        secondary: "#EEF6D4",
-        "secondary-container": "#EEF6D4",
+        primary: "#10451D",
+        secondary: "#B7EFC5",
+        "secondary-container": "#B7EFC5",
         "on-surface": "#32373A",
         "on-surface-variant": "#838F94",
-        "on-secondary": "#2C2F22",
+        "on-secondary": "#10451D",
         surface: "#FBFBFB",
         "surface-bright": "#727F85",
         "surface-variant": "#EEEFF0",
@@ -47,11 +47,11 @@ const config: Config = {
 
         // DARK MODE COLORS
         "primary-dark": "#5C7B85",
-        "secondary-dark": "#6F7755",
-        "secondary-container-dark": "#6F7755",
+        "secondary-dark": "#C3E8BD",
+        "secondary-container-dark": "#C3E8BD",
         "on-surface-dark": "#EEEFF0",
         "on-surface-variant-dark": "#E7EAEB",
-        "on-secondary-dark": "#EEF6D4",
+        "on-secondary-dark": "#10451D",
         "surface-dark": "#282C2E",
         "surface-bright-dark": "#727F85",
         "surface-variant-dark": "#838F94",

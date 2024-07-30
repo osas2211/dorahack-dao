@@ -1,15 +1,15 @@
 // Interface Tabkes Table
-export interface RequestDisplayI {
+export interface ProposalI {
   name: string
   picture: string
-  department: string
+  theme: string
   date_submitted: string
-  due_date: string
+  end_date: string
   title: string
   status: statusT
   priority: priorityT
   id: string
-  email: string
+  email?: string
 }
 
 export type statusT = "pending" | "completed" | "rejected"
