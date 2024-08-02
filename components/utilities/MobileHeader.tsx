@@ -22,7 +22,7 @@ export const MobileHeader = () => {
           <GiHamburgerMenu className="text-xl" onClick={toggleNavDrawer} />
         </div>
         <div onClick={toggleSearchModal} className="cursor-pointer">
-          <p className="text-[16px]">Search for a request, LP...</p>
+          <p className="text-[16px]">Search for a proposals</p>
         </div>
         <Popover
           placement={"bottomLeft"}
@@ -68,7 +68,7 @@ export const MobileHeader = () => {
           <Divider className="my-0" />
           <div className="p-[16px]">
             <p className="text-on-surface-variant dark:text-on-surface-variant-dark text-[16px] mb-5">
-              Search for a request, LPO, RFQ, RFP or team
+              Search for proposals
             </p>
             <Input size="large" className="w-full" autoFocus={true} />
           </div>
