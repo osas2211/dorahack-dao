@@ -14,7 +14,7 @@ export const SideNav = () => {
   }
   const pathname = usePathname()
   return (
-    <aside className="w-full h-[100vh] bg-surface-container-low dark:bg-surface-container-low-dark py-[30px] space-y-[32px] shadow-md">
+    <aside className="w-full h-[100vh] bg-surface-container-low dark:bg-surface-container-low-dark py-[30px] space-y-[32px]">
       <div className="flex flex-col gap-[16px] px-[16px]">
         {/* <Image
           src={mode === "light" ? "/sourcify.svg" : "/sourcify-dark.svg"}
