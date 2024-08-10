@@ -27,7 +27,7 @@ export const SideNav = () => {
       <div className="max-h-[400px] md:max-h-[55vh] xl:min-h-[72vh] overflow-y-auto">
         <nav className="space-y-[4px]">
           {routes.map((route, index) => {
-            const active = route.path === pathname
+            const active = pathname.includes(route.path)
             return (
               <Link
                 href={route.path}

@@ -17,6 +17,7 @@ import { Status } from "./Status"
 import { BsEye } from "react-icons/bs"
 import { BsTrash } from "react-icons/bs"
 import { ProposalI } from "@/interface/proposals"
+import Link from "next/link"
 
 const columns: TableProps<ProposalI>["columns"] = [
   {
@@ -24,24 +25,26 @@ const columns: TableProps<ProposalI>["columns"] = [
     dataIndex: "name",
     key: "name",
     render: (text, record) => (
-      <div className="flex gap-2">
-        <div>
-          <Avatar
-            size={42}
-            src={record.picture}
-            className="bg-tertiary-container text-primary"
-          >
-            <span>{record.name[0]}</span>
-          </Avatar>
+      <Link href={`/proposals/${record.id}`}>
+        <div className="flex gap-2 text-on-surface dark:text-on-surface-dark">
+          <div>
+            <Avatar
+              size={42}
+              src={record.picture}
+              className="bg-tertiary-container text-primary"
+            >
+              <span>{record.name[0]}</span>
+            </Avatar>
+          </div>
+          <div>
+            <p className="font-semibold leading-snug">{record.name}</p>
+            <p className="text-[11px] leading-snug">{record.theme}</p>
+            <p className="text-[11px] leading-snug">
+              {moment(record.date_submitted).format("LL")}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="font-semibold leading-snug">{record.name}</p>
-          <p className="text-[11px] leading-snug">{record.theme}</p>
-          <p className="text-[11px] leading-snug">
-            {moment(record.date_submitted).format("LL")}
-          </p>
-        </div>
-      </div>
+      </Link>
     ),
   },
   {
@@ -49,7 +52,13 @@ const columns: TableProps<ProposalI>["columns"] = [
     dataIndex: "title",
     key: "title",
     render: (text, record) => {
-      return <p className="font-medium">{record.title}</p>
+      return (
+        <Link href={`/proposals/${record.id}`}>
+          <p className="font-medium text-on-surface dark:text-on-surface-dark">
+            {record.title}
+          </p>
+        </Link>
+      )
     },
   },
   {
@@ -57,7 +66,13 @@ const columns: TableProps<ProposalI>["columns"] = [
     dataIndex: "status",
     key: "status",
     render: (text, record) => {
-      return <Status type={record.status} />
+      return (
+        <Link href={`/proposals/${record.id}`}>
+          <div className="text-on-surface dark:text-on-surface-dark">
+            <Status type={record.status} />
+          </div>
+        </Link>
+      )
     },
   },
   {
@@ -66,7 +81,11 @@ const columns: TableProps<ProposalI>["columns"] = [
     dataIndex: "tags",
     render: (value, record) => {
       return (
-        <p className="font-medium">{moment(record.end_date).format("LL")}</p>
+        <Link href={`/proposals/${record.id}`}>
+          <p className="font-medium text-on-surface dark:text-on-surface-dark">
+            {moment(record.end_date).format("LL")}
+          </p>
+        </Link>
       )
     },
   },
