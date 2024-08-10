@@ -17,8 +17,8 @@ const config: Config = {
       colors: {
         // LIGHT MODE COLORS
         primary: "#10451D",
-        secondary: "#B7EFC5",
-        "secondary-container": "#B7EFC5",
+        secondary: "#FF7D29",
+        "secondary-container": "#FF7D29",
         "on-surface": "#32373A",
         "on-surface-variant": "#838F94",
         "on-secondary": "#10451D",
@@ -47,8 +47,8 @@ const config: Config = {
 
         // DARK MODE COLORS
         "primary-dark": "#5C7B85",
-        "secondary-dark": "#C3E8BD",
-        "secondary-container-dark": "#C3E8BD",
+        "secondary-dark": "#FEFFD2",
+        "secondary-container-dark": "#FEFFD2",
         "on-surface-dark": "#EEEFF0",
         "on-surface-variant-dark": "#E7EAEB",
         "on-secondary-dark": "#10451D",

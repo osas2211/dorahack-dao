@@ -16,34 +16,15 @@ export const SideNav = () => {
   return (
     <aside className="w-full h-[100vh] bg-surface-container-low dark:bg-surface-container-low-dark py-[30px] space-y-[32px]">
       <div className="flex flex-col gap-[16px] px-[16px]">
-        {/* <Image
-          src={mode === "light" ? "/sourcify.svg" : "/sourcify-dark.svg"}
-          alt="logo"
-          preview={false}
-          width={117}
-        /> */}
-        <p className="font-semibold">DoraHack - DAO</p>
+        <div className="flex items-center gap-3">
+          <Avatar src="/fuse.png" size={50} />
+          <p className="font-normal">Fuse - DAO</p>
+        </div>
       </div>
       <div className="">
-        <div className="p-[16px] flex gap-[28px] items-center">
-          <Avatar
-            src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1.jpg"
-            size={52}
-          ></Avatar>
-          <Badge
-            count={5}
-            className="text-sm cursor-pointer"
-            styles={{ indicator: { color: "#fff" } }}
-          >
-            <CgBell className="text-2xl" />
-          </Badge>
-        </div>
-        <p className="p-[16px] py-[0px] text-on-surface-variant dark:text-on-surface-variant-dark">
-          Welcome, John
-        </p>
-        <Divider className="border-[1.5px] mb-0" />
+        <Divider className="border-[1px] mb-0" />
       </div>
-      <div className="px-[16px] max-h-[400px] md:max-h-[45vh] xl:min-h-[62vh] overflow-y-auto">
+      <div className="max-h-[400px] md:max-h-[55vh] xl:min-h-[72vh] overflow-y-auto">
         <nav className="space-y-[4px]">
           {routes.map((route, index) => {
             const active = route.path === pathname
@@ -51,16 +32,16 @@ export const SideNav = () => {
               <Link
                 href={route.path}
                 key={index}
-                className={`px-[8px] py-[12px] flex items-center gap-[8px] rounded-md text-on-surface dark:text-on-surface-dark ${
+                className={`px-6 py-[16px] flex items-center gap-[8px] text-on-surface dark:text-on-surface-dark ${
                   active
-                    ? "bg-secondary-container dark:bg-secondary-container-dark text-on-secondary dark:text-on-secondary-dark"
-                    : ""
+                    ? "bg-gradient-to-r from-secondary/15 to-secondary/0 dark:from-secondary-dark/20 dark:to-secondary-dark/0 border-l-[5px] border-secondary dark:border-secondary-dark"
+                    : "pl-[30px]"
                 }`}
               >
                 <div
                   className={`text-[24px] ${
                     active
-                      ? "text-on-secondary dark:text-on-secondary-dark"
+                      ? "text-secondary dark:text-secondary-dark"
                       : "text-on-surface dark:text-on-surface-dark"
                   }`}
                 >
@@ -69,7 +50,7 @@ export const SideNav = () => {
                 <p
                   className={`text-[14px] ${
                     active
-                      ? "font-extrabold text-on-secondary dark:text-on-secondary-dark"
+                      ? "font-extrabold text-secondary dark:text-secondary-dark"
                       : "text-on-surface dark:text-on-surface-dark"
                   }`}
                 >
@@ -80,7 +61,7 @@ export const SideNav = () => {
           })}
         </nav>
       </div>
-      <Divider className="border-[1.5px] mb-0" />
+      <Divider className="border-[1px] mb-0" />
       <div className="px-[16px] pb-[20px]">
         <span className="text-[14px] mr-3">Dark theme</span>
         <Switch value={mode === "dark"} onChange={toggleMode} />
