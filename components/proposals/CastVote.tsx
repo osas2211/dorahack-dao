@@ -43,7 +43,7 @@ export const CastVote = () => {
         </Button>
       </div>
       <div className="text-sm mt-3">
-        <CountdownTimer targetDate="2024-08-17T09:20:04.910Z" />
+        <CountdownTimer targetDate="2024-08-12T00:59:00.910Z" />
       </div>
     </div>
   )

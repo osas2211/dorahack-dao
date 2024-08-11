@@ -2,7 +2,7 @@
 import { useThemeMode } from "@/hooks/useThemeMode"
 import React, { useEffect } from "react"
 import { Inter, Poppins, Space_Grotesk } from "next/font/google"
-const font_family = Space_Grotesk({
+const font_family = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 })

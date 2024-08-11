@@ -8,21 +8,18 @@ const investment_options = [
     title: "Corporate debt 1",
     percentage: "8.5%",
     period: "6 months",
-    price_per_unit: 5000,
     maturity_date: "1st December 2024",
   },
   {
     title: "Corporate debt 2",
     percentage: "4.5%",
     period: "3 months",
-    price_per_unit: 5000,
     maturity_date: "1st October 2024",
   },
   {
     title: "Corporate debt 3",
     percentage: "18.5%",
     period: "18 months",
-    price_per_unit: 5000,
     maturity_date: "1st December 2025",
   },
 ]
@@ -31,12 +28,19 @@ export const InvestmentOptions = () => {
   return (
     <div className="text-sm">
       <p className="font-semibold">Investment Options</p>
-      <div>
+      <div className="mt-1">
         <p className="">
-          <span className="font-medium">Start Date: </span>
-          <span>12th August 2024</span>
+          <span>Start Date: </span>
+          <span className="font-semibold">12th August 2024</span>
+        </p>
+        <p className="-mt-1">
+          <span>Price per unit: </span>
+          <span className="font-semibold text-secondary dark:text-secondary-dark">
+            5,000 Fuse
+          </span>
         </p>
       </div>
+
       <div className="my-4 md:my-6 grid md:grid-cols-3 gap-6">
         {investment_options.map((option, index) => {
           return (
@@ -58,17 +62,17 @@ export const InvestmentOptions = () => {
               <div className=" my-3">
                 <p className="font-medium">{option.title}</p>
                 <p className="">
-                  <span className="font-medium">Period: </span>
-                  <span>{option.period}</span>
+                  <span className="font-normal">Period: </span>
+                  <span className="font-semibold">{option.period}</span>
                 </p>
                 <p className="">
-                  <span className="font-medium">Expected Return: </span>
-                  <span>{option.percentage}</span>
+                  <span className="font-normal">Expected Return: </span>
+                  <span className="font-semibold">{option.percentage}</span>
                 </p>
 
                 <p className="">
-                  <span className="font-medium">Maturity Date: </span>
-                  <span>{option.maturity_date}</span>
+                  <span className="font-normal">Maturity Date: </span>
+                  <span className="font-semibold">{option.maturity_date}</span>
                 </p>
               </div>
             </div>

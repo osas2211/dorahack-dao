@@ -6,6 +6,7 @@ import { CastVote } from "./CastVote"
 import { GoBack } from "../utilities/GoBack"
 import { VoteStats } from "./VoteStats"
 import { InvestmentOptions } from "./InvestmentOptions"
+import { CommentSection } from "./CommentSection"
 
 export const ProposalDetails = () => {
   return (
@@ -22,6 +23,9 @@ export const ProposalDetails = () => {
               <InvestmentOptions />
             </div>
             <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
+              <CommentSection />
+            </div>
+            <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
               <ProposalVoters />
             </div>
           </div>
@@ -35,10 +39,13 @@ export const ProposalDetails = () => {
           </div>
         </div>
         <div className="md:hidden space-y-5">
+          {/* Shows In Mobile */}
           <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
             <InvestmentOptions />
           </div>
-          {/* Shows In Mobile */}
+          <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
+            <CommentSection />
+          </div>
           <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
             <ProposalVoters />
           </div>
