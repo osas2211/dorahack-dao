@@ -52,7 +52,7 @@ export const ProposalDescription = () => {
         </p>
       </div>
       <div className="text-sm">
-        <p className="opacity-90">Voting conditions</p>
+        <p className="font-medium">Investment Strategy</p>
         <p className="opacity-90">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quo fuga
           nam quod dolor earum aperiam autem illum nihil repellat consequatur
