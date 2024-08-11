@@ -98,9 +98,9 @@ export const VoteStats = () => {
           </Tooltip>
         </div>
         <div className="my-4 mb-4">
-          <div className="flex gap-1 h-[10px] rounded-full shadow-sm bg-surface-container">
+          <div className="flex gap-1 h-[10px] rounded-full shadow-sm bg-surface-container dark:bg-surface-container-dark">
             <div
-              className="bg-black/20 dark:bg-white/20 rounded-full"
+              className="bg-black/20 dark:bg-white/30 rounded-full"
               style={{ width: `${quorom}%` }}
             />
           </div>

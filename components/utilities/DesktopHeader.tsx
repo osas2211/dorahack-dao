@@ -14,6 +14,8 @@ export const DesktopHeader = () => {
     ? "Proposals"
     : pathname.includes("/dashboard")
     ? "Dashboard"
+    : pathname.includes("/investments")
+    ? "Vetted Investments"
     : ""
   return (
     <div className="sticky top-1 left-[0] z-[20] bg-surface dark:bg-surface-dark py-[6px] pb-[12px] md:block hidden">

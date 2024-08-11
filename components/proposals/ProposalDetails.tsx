@@ -5,6 +5,7 @@ import { ProposalVoters } from "./ProposalVoters"
 import { CastVote } from "./CastVote"
 import { GoBack } from "../utilities/GoBack"
 import { VoteStats } from "./VoteStats"
+import { InvestmentOptions } from "./InvestmentOptions"
 
 export const ProposalDetails = () => {
   return (
@@ -15,10 +16,14 @@ export const ProposalDetails = () => {
           <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm ">
             <ProposalDescription />
           </div>
-
-          <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm md:block hidden">
+          <div className="md:block hidden space-y-5">
             {/* Shows In Desktop */}
-            <ProposalVoters />
+            <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
+              <InvestmentOptions />
+            </div>
+            <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
+              <ProposalVoters />
+            </div>
           </div>
         </div>
         <div className="md:sticky md:h-[70vh] md:top-[70px] md:right-0 w-full space-y-5">
@@ -29,9 +34,14 @@ export const ProposalDetails = () => {
             <VoteStats />
           </div>
         </div>
-        <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm md:hidden">
+        <div className="md:hidden space-y-5">
+          <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
+            <InvestmentOptions />
+          </div>
           {/* Shows In Mobile */}
-          <ProposalVoters />
+          <div className="w-full bg-white dark:bg-surface-container-low-dark rounded-xl p-4 md:p-6 shadow-sm">
+            <ProposalVoters />
+          </div>
         </div>
       </div>
     </div>

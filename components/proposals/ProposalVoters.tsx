@@ -7,11 +7,11 @@ import { CgClose } from "react-icons/cg"
 export const ProposalVoters = () => {
   return (
     <div className="ms:text-[16px] text-sm">
-      <p>Votes</p>
+      <p className="font-semibold">Votes</p>
       <div className="grid md:grid-cols-[60%,20%,20%] grid-cols-[80%,20%] gap-2 text-sm py-3">
-        <p>Voter</p>
-        <p>Vote</p>
-        <p className="md:block hidden">Voting power</p>
+        <p className="font-medium">Voter</p>
+        <p className="font-medium">Vote</p>
+        <p className="md:block hidden font-medium">Voting power</p>
       </div>
       <div className="">
         <Voter

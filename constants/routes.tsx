@@ -15,7 +15,7 @@ interface RouteI {
 export const routes: RouteI[] = [
   { icon: <AiFillHome />, name: "Home", path: "/dashboard" },
   { icon: <TiDocumentText />, name: "Proposals", path: "/proposals" },
-  { icon: <CgPoll />, name: "Voting", path: "/voting" },
+  { icon: <CgPoll />, name: "Vetted Investments", path: "/investments" },
   { icon: <TiTags />, name: "Shares", path: "/shares" },
   { icon: <IoSettingsOutline />, name: "Settings", path: "/settings" },
   { icon: <TbHelpSquareRounded />, name: "Help", path: "/help" },

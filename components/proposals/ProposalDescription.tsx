@@ -40,7 +40,7 @@ export const ProposalDescription = () => {
         </div>
       </div>
       <div className="my-10">
-        <p className="opacity-80 md:text-[15px] text-sm">
+        <p className="opacity-90 text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quo fuga
           nam quod dolor earum aperiam autem illum nihil repellat consequatur
           recusandae facilis, laborum eveniet. Omnis aperiam expedita nesciunt
@@ -51,9 +51,9 @@ export const ProposalDescription = () => {
           quidem reprehenderit fuga, asperiores ipsum molestiae!
         </p>
       </div>
-      <div className="md:text-[15px] text-sm">
+      <div className="text-sm">
         <p className="opacity-90">Voting conditions</p>
-        <p className="opacity-80">
+        <p className="opacity-90">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quo fuga
           nam quod dolor earum aperiam autem illum nihil repellat consequatur
           recusandae facilis, laborum eveniet. Omnis aperiam expedita nesciunt
