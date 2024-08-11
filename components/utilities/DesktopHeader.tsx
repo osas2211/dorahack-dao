@@ -16,7 +16,7 @@ export const DesktopHeader = () => {
     ? "Dashboard"
     : ""
   return (
-    <div className="sticky top-0 left-[0] z-[20] bg-surface dark:bg-surface-dark py-[6px] pb-[12px] md:block hidden">
+    <div className="sticky top-1 left-[0] z-[20] bg-surface dark:bg-surface-dark py-[6px] pb-[12px] md:block hidden">
       <header className="flex w-[100%] items-center justify-between ">
         <p className="text-[18px] md:text-[20px]">{title}</p>
         <div className="flex items-center gap-5">
