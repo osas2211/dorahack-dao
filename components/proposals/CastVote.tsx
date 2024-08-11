@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "antd"
 import React, { useState } from "react"
+import { CountdownTimer } from "../utilities/CountdownTimer"
 
 export const CastVote = () => {
   const [choice, setChoice] = useState("")
@@ -34,6 +35,9 @@ export const CastVote = () => {
         >
           Vote
         </Button>
+      </div>
+      <div className="text-sm mt-3">
+        <CountdownTimer targetDate="2024-08-17T09:20:04.910Z" />
       </div>
     </div>
   )
