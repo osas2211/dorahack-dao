@@ -1,5 +1,5 @@
 "use client"
-import React, { ReactNode } from "react"
+import React, { ReactNode, useEffect, useState } from "react"
 import { ConfigProvider, theme } from "antd"
 import { useThemeMode } from "@/hooks/useThemeMode"
 
@@ -11,32 +11,38 @@ export const AntProvider = ({
   primary_color?: string
 }) => {
   const { mode } = useThemeMode()
+  const [modeState, setModeState] = useState<"light" | "dark">("light")
+  useEffect(() => {
+    if (mode) {
+      setModeState(mode)
+    }
+  }, [mode])
   const colors = {
     light: {
-      primaryColor: "#10451D",
+      primaryColor: "#65B741",
       surfaceColor: "#FBFBFB",
-      controlOutlineColor: "#10451D",
+      controlOutlineColor: "#65B741",
       borderColor: "#A6AEB2",
     },
     dark: {
-      primaryColor: "#A3B18A",
+      primaryColor: "#80AF81",
       surfaceColor: "#282C2E",
-      controlOutlineColor: "#A3B18A",
+      controlOutlineColor: "#80AF81",
       borderColor: "#DFE2E3",
     },
   }
   const antTheme =
-    mode === "light" ? theme.defaultAlgorithm : theme.darkAlgorithm
+    modeState === "light" ? theme.defaultAlgorithm : theme.darkAlgorithm
 
   return (
     <ConfigProvider
       theme={{
         algorithm: antTheme,
         token: {
-          colorPrimary: primary_color || colors[mode].primaryColor,
-          colorBgContainer: colors[mode].surfaceColor,
-          colorBorder: colors[mode].borderColor,
-          controlOutline: colors[mode].primaryColor,
+          colorPrimary: primary_color || colors[modeState].primaryColor,
+          colorBgContainer: colors[modeState].surfaceColor,
+          colorBorder: colors[modeState].borderColor,
+          controlOutline: colors[modeState].primaryColor,
           fontFamily: "",
           controlHeight: 40,
           fontSize: 16,

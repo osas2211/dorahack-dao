@@ -95,13 +95,13 @@ const Voter = ({
         </div>
 
         {vote === "yes" ? (
-          <div className="text-success flex items-center h-[40px]">
+          <div className="text-success dark:text-success-dark flex items-center h-[40px]">
             <div>
               Yes <BiCheck className="inline" size={20} />
             </div>
           </div>
         ) : (
-          <div className="text-error flex items-center h-[40px]">
+          <div className="text-error dark:text-error-dark flex items-center h-[40px]">
             <div>
               No <CgClose className="inline" size={18} />
             </div>

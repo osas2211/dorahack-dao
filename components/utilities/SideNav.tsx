@@ -1,7 +1,7 @@
 "use client"
 import { useThemeMode } from "@/hooks/useThemeMode"
 import { Avatar, Badge, Divider, Image, Switch } from "antd"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { CgBell } from "react-icons/cg"
 import { routes } from "@/constants/routes"
 import Link from "next/link"
@@ -9,10 +9,17 @@ import { usePathname } from "next/navigation"
 
 export const SideNav = () => {
   const { mode, setMode } = useThemeMode()
+  const [modeState, setModeState] = useState<"light" | "dark">("light")
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light")
+    setModeState(mode === "light" ? "dark" : "light")
   }
   const pathname = usePathname()
+  useEffect(() => {
+    if (mode) {
+      setModeState(mode)
+    }
+  }, [mode])
   return (
     <aside className="w-full h-[100vh] bg-surface-container-low dark:bg-surface-container-low-dark py-[30px] space-y-[32px]">
       <div className="flex flex-col gap-[16px] px-[16px]">
@@ -64,7 +71,7 @@ export const SideNav = () => {
       <Divider className="border-[1px] mb-0" />
       <div className="px-[16px] pb-[20px]">
         <span className="text-[14px] mr-3">Dark theme</span>
-        <Switch value={mode === "dark"} onChange={toggleMode} />
+        <Switch value={modeState === "dark"} onChange={toggleMode} />
       </div>
     </aside>
   )
