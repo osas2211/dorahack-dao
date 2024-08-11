@@ -5,7 +5,7 @@ import { CountdownTimer } from "../utilities/CountdownTimer"
 
 export const CastVote = () => {
   const [choice, setChoice] = useState("")
-  const votes = ["yes", "no"]
+  const votes = ["yes", "no", "abstain"]
   return (
     <div className="text-sm">
       <p className="font-semibold">Cast your vote</p>
@@ -22,7 +22,13 @@ export const CastVote = () => {
                   : "bg-surface-container-low dark:bg-surface-container-low-dark"
               }  cursor-pointer border-[1px] border-outline-variant/30 dark:border-outline-variant-dark rounded-lg p-4 py-3`}
             >
-              <p className="capitalize">{vote}</p>
+              <p
+                className={`${
+                  isChoice ? "font-semibold text-[16px]" : ""
+                } capitalize`}
+              >
+                {vote}
+              </p>
             </div>
           )
         })}

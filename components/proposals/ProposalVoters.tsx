@@ -8,12 +8,12 @@ export const ProposalVoters = () => {
   return (
     <div className="ms:text-[16px] text-sm">
       <p>Votes</p>
-      <div className="grid md:grid-cols-[60%,20%,20%] grid-cols-[80%,20%] gap-2 text-sm mt-4 mb-5">
+      <div className="grid md:grid-cols-[60%,20%,20%] grid-cols-[80%,20%] gap-2 text-sm py-3">
         <p>Voter</p>
         <p>Vote</p>
         <p className="md:block hidden">Voting power</p>
       </div>
-      <div className="space-y-5">
+      <div className="">
         <Voter
           icon="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/93.jpg"
           vote="yes"
@@ -74,7 +74,7 @@ const Voter = ({
 }) => {
   return (
     <div>
-      <div className="grid md:grid-cols-[60%,20%,20%] grid-cols-[80%,20%] gap-2">
+      <div className="grid md:grid-cols-[60%,20%,20%] grid-cols-[80%,20%] gap-2 py-3">
         <div>
           <div className="flex items-center gap-2 text-on-surface dark:text-on-surface-dark">
             <div>
