@@ -7,10 +7,9 @@ export interface ProposalI {
   end_date: string
   title: string
   status: statusT
-  priority: priorityT
   id: string
   email?: string
 }
 
-export type statusT = "pending" | "completed" | "rejected"
+export type statusT = "pending" | "passed" | "rejected"
 export type priorityT = "urgent" | "low" | "high" | "medium"

@@ -4,7 +4,7 @@ import React from "react"
 
 const statusColors: Record<statusT, string> = {
   pending: "#F7E7B2",
-  completed: "#B3E9B2",
+  passed: "#B3E9B2",
   rejected: "#FAA6A6",
 }
 

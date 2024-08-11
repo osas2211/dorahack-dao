@@ -38,7 +38,7 @@ const columns: TableProps<ProposalI>["columns"] = [
           </div>
           <div>
             <p className="font-semibold leading-snug">{record.name}</p>
-            <p className="text-[11px] leading-snug">{record.theme}</p>
+            <p className="text-[11px] leading-snug">{"Investment"}</p>
             <p className="text-[11px] leading-snug">
               {moment(record.date_submitted).format("LL")}
             </p>
@@ -76,7 +76,7 @@ const columns: TableProps<ProposalI>["columns"] = [
     },
   },
   {
-    title: "End date",
+    title: "Voting End Date",
     key: "tags",
     dataIndex: "tags",
     render: (value, record) => {
@@ -100,13 +100,15 @@ const columns: TableProps<ProposalI>["columns"] = [
         placement="bottomLeft"
         content={
           <div className="w-[142px]">
-            <Button
-              icon={<BsEye size={22} />}
-              className="w-full justify-start h-[40px] bg-transparent border-0 text-[14px] font-medium"
-              type="text"
-            >
-              View details
-            </Button>
+            <Link href={`/proposals/${record.id}`}>
+              <Button
+                icon={<BsEye size={22} />}
+                className="w-full justify-start h-[40px] bg-transparent border-0 text-[14px] font-medium"
+                type="text"
+              >
+                View details
+              </Button>
+            </Link>
           </div>
         }
       >
