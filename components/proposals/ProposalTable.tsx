@@ -48,7 +48,7 @@ const columns: TableProps<ProposalI>["columns"] = [
     ),
   },
   {
-    title: "Title",
+    title: "Investment Strategy",
     dataIndex: "title",
     key: "title",
     render: (text, record) => {
